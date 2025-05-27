@@ -12,7 +12,7 @@ dfg.columns.values[2] = "PSEAT NUMBER"
 dfc = pd.read_excel(DATA_FILENAME, sheet_name= "CD Data")
 # Display the DataFrame in Streamlit
 st.title("2025 RMHS Seating System")
-st.write(dfc)
+
 
 event = st.radio("Select Event",("Graduation", "Class Day"))
 if event == "Graduation":
