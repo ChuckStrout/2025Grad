@@ -1,4 +1,4 @@
-SECTION,ROW,SEAT NUMBER,SIDE,ROW,SEAT NUMBER,Last Name,First Name,,Middle,,,
+SECTION,PROW,PSEAT NUMBER,SIDE,ROW,SEAT NUMBER,Last Name,First Name,,Middle,,,
 STAGE,STAGE,1,STAGE,STAGE,v1,Bateman,Vivian,val,,0,0, 
 STAGE,STAGE,1,STAGE,STAGE,v2,,,v2,,,,
 STAGE,STAGE,2,STAGE,STAGE,sal,DeRosa,Caitlin,sal,June,0,scl,Sum Cum Laude
