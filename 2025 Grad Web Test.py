@@ -14,7 +14,7 @@ dfg.columns.values[5] = "SEAT NUMBER"
 dfc = pd.read_excel(DATA_FILENAME, sheet_name= "CD Data")
 # Display the DataFrame in Streamlit
 st.title("2025 RMHS Seating System")
-st.write(dfg)
+#st.write(dfg)
 
 event = st.radio("Select Event",("Graduation", "Class Day"))
 if event == "Graduation":
@@ -68,4 +68,7 @@ if venue =="In the Auditorium" and event == "Class Day":
     st.text_input("You will be in the Lane:", value=selected_row["Lane"], disabled=True)
     st.text_input("To Sit in Your Seat TURN:", value=selected_row["Turn"], disabled=True)
     st.text_input("You will Sit in the Section:", value=selected_row["Section"], disabled=True)
-    st.text_input("Sit in Seat Number:", value=selected_row["Seat"], disabled=True)
+    st.text_area("Sit in Seat Number:", value=selected_row["Seat"])
+
+
+st.text("v7")
