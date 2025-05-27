@@ -41,16 +41,24 @@ else:
 # Graduation
 if venue == "In PAC" and event == "Graduation":
     selected_row = dfg[dfg["Full Name"] == selected_name].iloc[0]
-    st.subheader("Starting in the PAC ")
-    st.text_input("Sit in the Section:", value=selected_row["SECTION"], disabled=True)
-    st.text_input("Sit in Row:", value=selected_row["PROW"], disabled=True)
-    st.text_input("Sit in Seat Number:", value=selected_row["PSEAT NUMBER"], disabled=True)
+    st.header("Starting in the PAC ")
+    
+    sectg=selected_row["SECTION"]
+    st.text(f"Sit in the {sectg} Section")
+    rowg=selected_row["PROW"]
+    st.text(f"Sit in Row: {rowg}")
+    snumg=selected_row["PSEAT NUMBER"]
+    st.text(f"Sit in Seat Number: {snumg}" )
+
 if venue =="On Turf" and event == "Graduation":
     selected_row = dfg[dfg["Full Name"] == selected_name].iloc[0]
-    st.subheader("On The Turf")
-    st.text_input("You will be On the Side:", value=selected_row["SIDE"], disabled=True)
-    st.text_input("You will Sit in the Row:", value=selected_row["ROW"], disabled=True)
-    st.text_input("Sit in Seat Number:", value=selected_row["SEAT NUMBER"], disabled=True)
+    st.header("On The Turf")
+    side=selected_row["SIDE"]
+    st.text(f"You will be On the Side: {side}")
+    rowg=selected_row["ROW"]
+    st.text(f"You will Sit in the Row: {rowg}" )
+    sng=selected_row["SEAT NUMBER"]
+    st.text(f"Sit in Seat Number: {sng}")
 
 
 #Lane	Number	Turn	Section	Row	Seat
@@ -58,17 +66,33 @@ if venue =="On Turf" and event == "Graduation":
 # Class Day
 if venue == "In Field House" and event == "Class Day":
     selected_row = dfc[dfc["Full Name"] == selected_name].iloc[0]
-    st.subheader("Starting in the Field House ")
-    st.text_input("Start in the Lane", value=selected_row["Lane"], disabled=True)
-    st.text_input("You are number:", value=selected_row["Number"], disabled=True)
+    st.header("For Class Day, Starting in the Field House ")
+    lane=selected_row["Lane"]
+    st.text(f"You will be in the {lane}")
+    numb=selected_row["Number"]
+    st.text(f"You will be number {numb} in that row")
+    st.title(f"{lane}         -       {numb}")
+
     
 if venue =="In the Auditorium" and event == "Class Day":
     selected_row = dfc[dfc["Full Name"] == selected_name].iloc[0]
-    st.subheader("In the Auditorium")
-    st.text_input("You will be in the Lane:", value=selected_row["Lane"], disabled=True)
-    st.text_input("To Sit in Your Seat TURN:", value=selected_row["Turn"], disabled=True)
-    st.text_input("You will Sit in the Section:", value=selected_row["Section"], disabled=True)
-    st.text_area("Sit in Seat Number:", value=selected_row["Seat"])
+    st.header("In the Auditorium")
+    
+    turn=selected_row["Turn"]
+    sect=selected_row["Section"]
+    row=selected_row["Row"]
+    st.subheader("To Sit in Your Seat:")
+    st.text(f"{turn} and enter the Row {row} of the {sect} Section")
 
+    sn=selected_row["Seat"]
+    st.text(f"Sit in Seat Number: {sn}")
 
-st.text("v7")
+st.text(f"")
+st.text(f"")
+st.text(f"")
+st.text(f"")
+st.text(f"")
+st.text(f"")
+st.text(f"")
+st.text(f"")
+st.text("v05272514:37")
